@@ -4,14 +4,22 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Contact> contacts = new ArrayList<>();
-        Contact victor = new Contact("Victor","0783426747");
+        Contact victor = new Contact("VICTOR","0783426747");
         contacts.add(victor);
-        Contact pascal = new Contact("Pascal","0614826467");
+        Contact pascal = new Contact("pascal","0614826467");
         contacts.add(pascal);
-        Contact nina = new Contact("Nina","0689574236");
+        Contact nina = new Contact("NiNA","0689574236");
         contacts.add(nina);
-        Contact vivianne = new Contact("Vivianne","0610789376");
+        Contact vivianne = new Contact("viVIAnne","0610789376");
         contacts.add(vivianne);
+        victor.styleName();
+        System.out.println(victor.getName());
+        pascal.styleName();
+        System.out.println(pascal.getName());
+        nina.styleName();
+        System.out.println(nina.getName());
+        vivianne.styleName();
+        System.out.println(vivianne.getName());
         boolean exit = false;
         Scanner scanner = new Scanner(System.in);
         while (exit == false) {
