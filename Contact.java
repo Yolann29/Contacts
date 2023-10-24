@@ -59,7 +59,7 @@ public class Contact {
         StringBuilder styleName = new StringBuilder(this.contactName.toLowerCase());
         styleName = styleName.deleteCharAt(0);
         styleName = styleName.insert(0,Character.toUpperCase(this.contactName.charAt(0)));
-        this.contactName = styleName.toString();
+        this.setName(styleName.toString());
     }
 
     private String contactName;
