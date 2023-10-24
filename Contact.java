@@ -47,6 +47,14 @@ public class Contact {
         this.setNumber(newNumber);
     }
 
+    public boolean validNumber() {
+        if (this.contactNumber.length() == 10 && this.contactNumber.charAt(0) == '0') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     private String contactName;
     private String contactNumber;
 }
