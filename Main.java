@@ -115,6 +115,7 @@ public class Main {
         boolean nameCorrect = false;
         String name = "";
         String number = "";
+        Contact contact = new Contact(name, number);
         while (nameCorrect == false) {
             System.out.println("\nEnter the contact name:");
             name = scanner.nextLine();
@@ -131,11 +132,15 @@ public class Main {
             if (numExist(number, contacts) == true) {
                 System.out.println("\nNumber already atributed, please try another one.");
             } else {
-                numCorrect = true;
+                contact = new Contact(name, number);
+                if (contact.validNumber() == true) {
+                    numCorrect = true;
+                } else {
+                    System.out.println("\nIt is not a valid phone number, please try another one.");
+                }
             }
         }
         System.out.println("\nContact successfully created!!\n\nName: " + name + "\n" + "Number: " + number);
-        Contact contact = new Contact(name, number);
         return contact;
     }
 
